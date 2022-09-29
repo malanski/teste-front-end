@@ -12,7 +12,7 @@ const MainStyle = styled("main")(({ theme }) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'start',
-        
+
         titleLogo: {
             display: 'flex',
             justifyContent: 'center',
@@ -20,11 +20,11 @@ const MainStyle = styled("main")(({ theme }) => ({
 
             h2: {
                 margin: '144px 0 31px 96px',
-        
+
                 padding: '0',
                 fontSize: '80px',
             },
-            
+
             div: {
                 width: '161px',
                 height: '31.28px',
@@ -32,22 +32,70 @@ const MainStyle = styled("main")(({ theme }) => ({
 
             }
         },
+        picture:{
+            width: 'auto',
+            margin: 0,
+            alignSelf: 'flex-end',
+        },
     },
-    
 
+    [theme.breakpoints.down("laptop")]: {
+        div: {
+            width:'100%',
+            titleLogo: {
+                display: 'flex',
+                justifyContent: 'center',
+
+                h2: {
+                    margin: '10px 0 10px 63px',
+                    padding: '0',
+                    fontSize: '55px',
+                },
+                div: {
+                    width: '161px',
+                    height: '31.28px',
+                    margin: '0 0 0 63px',
+                },
+            },
+            picture:{
+                width: 'auto',
+                margin: 0
+            },
+        },
+    },
 
     [theme.breakpoints.down("tablet")]: {
+        height: "auto",
+        div: {
+            flexDirection: 'column',
+            height: "auto",
+            width:'100%',
+            titleLogo: {
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                h2: {
+                    margin: '10px 0 10px 43px',
+                    padding: '0',
+                    fontSize: '35px',
+                },
+                div: {
+                    width: '161px',
+                    height: '31.28px',
+                    margin: '0 0 0 43px',
+                },
+            },
+            div:{
 
+            },
+        },
     },
-
-
 }));
 
 
 export default function Main() {
-
     return (
-        <MainStyle>
+        <MainStyle >
             <Box
                 height='100vh'
                 width='100%'
@@ -66,15 +114,17 @@ export default function Main() {
                     </div>
                 </titleLogo>
 
-                <Image
-                    src={medias}
-                    sx={{
-                        width: '692.06px',
-                        height: '627px',
-                    }}
-                    // blurDataURL="data:..." automatically provided
-                    placeholder="blur" // Optional blur-up while loading
-                />
+                <picture>
+                    <Image
+                        src={medias}
+                        // sx={{
+                        //     width: '692.06px',
+                        //     height: '627px',
+                        // }}
+                        // blurDataURL="data:..." automatically provided
+                        placeholder="blur" // Optional blur-up while loading
+                    />
+                </picture>
             </Box>
 
         </MainStyle>
