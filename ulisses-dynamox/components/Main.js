@@ -13,7 +13,7 @@ const MainStyle = styled("main")(({ theme }) => ({
         justifyContent: 'space-between',
         alignItems: 'start',
 
-        titleLogo: {
+        section: {
             display: 'flex',
             justifyContent: 'center',
             flexDirection: 'column',
@@ -43,7 +43,7 @@ const MainStyle = styled("main")(({ theme }) => ({
     [theme.breakpoints.down("laptop")]: {
         div: {
             width:'100%',
-            titleLogo: {
+            section: {
                 display: 'flex',
                 justifyContent: 'center',
 
@@ -73,7 +73,7 @@ const MainStyle = styled("main")(({ theme }) => ({
             height: "auto",
             width:'100%',
 
-            titleLogo: {
+            section: {
                 display: 'flex',
                 justifyContent: 'center',
                 flexDirection: 'column',
@@ -106,7 +106,7 @@ export default function Main() {
                     background: `url(${grafismo.src}) center / cover`,
                 }}
             >
-                <titleLogo>
+                <section>
                     <h2>Solução <br />DynaPredict</h2>
                     <div>
                         <Image
@@ -115,7 +115,7 @@ export default function Main() {
                             placeholder="blur" // Optional blur-up while loading
                         />
                     </div>
-                </titleLogo>
+                </section>
 
                 <picture>
                     <Image

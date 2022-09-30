@@ -1,5 +1,13 @@
 import { Box, Button, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import Forms from './Forms'
+
+
+const callAllert = () => {
+    alert(`Como você gostaria de ser chamado?\n${seuNome}\nEm qual empresa você trabalha?\n${ondeTrabalha}\nDigite aqui o seu email.\n${seuEmail}\nQual o seu telefone?\n${seuTelefone}`)
+}
+
+
 const FooterStyles = styled("footer")(({ theme }) => ({
 
     backgroundColor: '#263252',
@@ -8,7 +16,7 @@ const FooterStyles = styled("footer")(({ theme }) => ({
     paddingTop: '41px',
     paddingBottom: '41px',
     textAlign: 'center',
-    
+
 
 
     h4: {
@@ -18,26 +26,27 @@ const FooterStyles = styled("footer")(({ theme }) => ({
         lineHeight: '35.22px',
     },
 
-    div: {
-        width: '426px',
-        div: {
+    // div: {
+    //     width: '426px',
+    //     div: {
 
-            label: {
-                textAlign: 'center',
-                width: '100%',
-                borderRadius:'10px 10px 0 0',
-                background: '#F4F7FC',
-            },
-            div: {
-                background: '#F4F7FC',
-                marginBottom: '11px',
-                height: 'auto',
-                input: {
+    //         label: {
+    //             textAlign: 'center',
+    //             // width: 'auto',
+    //             width: '99%',
+    //             borderRadius: '10px 10px 0 0',
+    //             background: '#F4F7FC',
+    //         },
+    //         div: {
+    //             background: '#F4F7FC',
+    //             marginBottom: '11px',
+    //             height: 'auto',
+    //             input: {
 
-                },
-            },
-        },
-    },
+    //             },
+    //         },
+    //     },
+    // },
 
     [theme.breakpoints.down("laptop")]: {
         h4: {
@@ -52,13 +61,13 @@ const FooterStyles = styled("footer")(({ theme }) => ({
             fontSize: '23px',
             lineHeight: '28px',
         },
-        
+
         div: {
             width: '99%',
-            marginLeft:'auto',
-            marginRight:'auto',
+            marginLeft: 'auto',
+            marginRight: 'auto',
 
-            div:{
+            div: {
                 margin: 0,
             }
         },
@@ -74,62 +83,49 @@ export default function Footer() {
             <h4>Ficou com dúvida?</h4>
             <h4>Nós entramos em contato com você</h4>
 
+            <Forms />
+{/* 
             <Box
                 sx={{
                     margin: '31px auto 30px auto',
-                    
                 }}
             >
                 <TextField
+                    onChange={(event) => seuNome = event.target.value}
                     variant="outlined"
-                    InputProps={{
-                        disableUnderline: true,
-                    }}
                     required
-                    
                     label="Como você gostaria de ser chamado?" />
 
                 <TextField
-                    variant="outlined"
-                    InputProps={{
-                        disableUnderline: true,
-                    }}
+                    onChange={(event) => ondeTrabalha = event.target.value}
                     required
-                    
                     label="Em qual empresa você trabalha?" />
 
                 <TextField
+                    onChange={(event) => seuEmail = event.target.value}
                     variant="outlined"
-                    InputProps={{
-                        disableUnderline: true,
-                    }}
                     required
-                    
                     label="Digite aqui o seu email" />
 
                 <TextField
+                    onChange={(event) => seuTelefone = event.target.value}
                     variant="outlined"
-                    InputProps={{
-                        disableUnderline: true,
-                    }}
                     required
-                    
                     label="Qual o seu telefone?" />
+            </Box> */}
 
-
-            </Box>
-
-
+{/* 
             <Button
                 sx={{
-                    width:'183px',
-                    fontSize:'23px',
-                    fontWeight:'700',
+                    width: '183px',
+                    fontSize: '23px',
+                    fontWeight: '700',
                 }}
+                onClick={callAllert}
                 variant="contained"
                 href="#outlined-buttons">
                 Enviar
-            </Button>
+            </Button> */}
         </FooterStyles>
     )
 }
