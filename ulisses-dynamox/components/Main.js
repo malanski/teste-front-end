@@ -20,7 +20,8 @@ const MainStyle = styled("main")(({ theme }) => ({
 
             h2: {
                 margin: '144px 0 31px 96px',
-
+                textShadow:'1.4px 0px #FFFFFF',
+                color:'#FFFFFF',
                 padding: '0',
                 fontSize: '80px',
             },
@@ -50,6 +51,7 @@ const MainStyle = styled("main")(({ theme }) => ({
                     margin: '10px 0 10px 63px',
                     padding: '0',
                     fontSize: '55px',
+
                 },
                 div: {
                     width: '161px',
@@ -65,11 +67,12 @@ const MainStyle = styled("main")(({ theme }) => ({
     },
 
     [theme.breakpoints.down("tablet")]: {
-        height: "auto",
+        height: "100%",
         div: {
             flexDirection: 'column',
             height: "auto",
             width:'100%',
+
             titleLogo: {
                 display: 'flex',
                 justifyContent: 'center',

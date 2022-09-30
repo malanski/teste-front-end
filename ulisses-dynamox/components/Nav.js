@@ -10,6 +10,7 @@ const NavStyles = styled("nav")(({ theme }) => ({
         display: 'flex',
         justifyContent: 'space-Between',
         fontSize: '20px',
+        fontWeighr: '500',
         gap: '37px',
         lineHeight: '23px',
         listStyleType: 'none',
@@ -33,10 +34,11 @@ const NavStyles = styled("nav")(({ theme }) => ({
 
 
     [theme.breakpoints.down("tablet")]: {
-        right: '43px',
-        top: '98px',
+        right: '28px',
+        top: '120px',
         ul: {
             width: '100%',
+            gap: '25px',
         }
     },
 
@@ -49,13 +51,14 @@ export default function Nav() {
                     <li>
                         <a
                             href="https://dynamox.net/dynapredict/"
+                            target="_blank"
                             title='Solução DynaPredict'>
                             DynaPredict
                         </a>
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="#sensores"
                             title='Sensores para Manutenção Preditiva'>
                             Sensores
                         </a>
@@ -63,7 +66,7 @@ export default function Nav() {
 
                     <li>
                         <a
-                            href="#"
+                            href="#contato"
                             title='Conheça como tornamos a alta tecnologia acessível e fácil de usar!'>
                             Contato
                         </a>

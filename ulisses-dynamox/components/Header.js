@@ -36,7 +36,7 @@ export default function Header() {
         <HeaderStyles>
             <a 
                 href="https://dynamox.net/"
-                title='Soluções de sensoriamento e análise de dados'target="_blank">
+                title='Soluções de sensoriamento e análise de dados' target="_blank">
                 <Image
                     src={logo} width='172.86px'
                     height='65.15px'

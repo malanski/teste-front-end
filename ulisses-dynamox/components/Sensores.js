@@ -16,7 +16,7 @@ const SensoresStyle = styled("div")(({ theme }) => ({
         height: "100%",
 
         div: {
-            margin: '0',
+            margin: '0 auto 37px auto',
 
             h3: {
                 color: '#37383D',
@@ -53,8 +53,11 @@ const SensoresStyle = styled("div")(({ theme }) => ({
             alignItems: 'center',
             width: '80%',
             margin: 'auto',
+            gap: '66.57px',
+
             div:{
-                width: '33%',
+                width: '276.83px',
+                height: '297.84px',
 
                 span:{
                     color: '#5D7A8C',
@@ -64,15 +67,45 @@ const SensoresStyle = styled("div")(({ theme }) => ({
                     textShadow:'1.4px 0px #5D7A8C',
                     letterSpacing:'0',
                     fontWeight: '700',
-
                 },
             },
         },
     },
 
+    [theme.breakpoints.down("laptop")]: {
+        section: {
+            div: {
+                margin: '0',
+                h3: {
+                    fontSize: '35px',
+                    lineHeight: '42px',
+                },
+                div: {
+                    p: {
+                        fontSize: '22px',
+                    },
+                },
+                a: {
+                    fontSize: '22px',
+                }
+            },
+            picture:{
+                flexWrap: 'wrap',
+
+                div:{
+                    span:{
+                        fontSize: '35px',
+                    },
+                },
+            },
+        },
+
+    },
 
 
     [theme.breakpoints.down("tablet")]: {
+        paddingTop: '41px',
+
         section: {
             div: {
                 margin: '0',
@@ -80,7 +113,6 @@ const SensoresStyle = styled("div")(({ theme }) => ({
                     fontSize: '30px',
                     textShadow:'1.4px 0px #37383D',
                     lineHeight: '37px',
-                    // height: '54px',
                 },
                 div: {
                     p: {
@@ -92,14 +124,16 @@ const SensoresStyle = styled("div")(({ theme }) => ({
                 }
             },
             picture:{
-                flexDirection: 'column',
+                // flexDirection: 'column',
+                gap: '20px',
+                paddingTop: '41px',
+
                 div:{
-                    width: '80%',
-                    marginTop:'30px',
-                    marginBottom:'30px',
-                    // borderBottom: '1px solid #37383D',
+                    height: 'auto',
+                    
                     borderRadius: '20px',
-                    boxShadow: '0 4px 0.8px 0 #263252',
+                    boxShadow: '0 0.5px 3.8px 0.2px #263252',
+
                     span:{
                         fontSize: '30px',
                     },
@@ -126,19 +160,17 @@ export default function Sensores() {
                     <h3>Sensores para Manutenção Preditiva</h3>
                     <div>
                         <p>
-                            Opções de sensores sem fio, ou DynaLoggers com sensores de vibração triaxial e
+                            Opções de sensores sem fio, ou DynaLoggers com sensores de vibração triaxial e <br />
+                            temperatura embarcados, que comunicam por Bluetooth com App mobile ou Gateway, <br />
+                            registrando os dados monitorados em sua maioria interna. Por conexão internet esses dados <br />
+                            são centralizados na Plataforma DynaPredict Web para análise, prognóstico e tomada de decisão. <br />
                         </p>
-                        <p>
-                            temperatura embarcados, que comunicam por Bluetooth com App mobile ou Gateway,
-                        </p>
-                        <p>
-                            registrando os dados monitorados em sua maioria interna. Por conexão internet esses dados
-                        </p>
-                        <p>
-                            são centralizados na Plataforma DynaPredict Web para análise, prognóstico e tomada de decisão.
-                        </p>
+                        
                     </div>
-                    <Button variant="contained" href="#outlined-buttons">
+                    <Button
+                        target="_blank"
+                        variant="contained"
+                        href="https://dynamox.net/dynapredict/">
                         ver mais
                     </Button>
                 </div>
